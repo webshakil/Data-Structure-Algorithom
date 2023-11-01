@@ -18,9 +18,14 @@ class BinarySearchTree {
             return this;
         }
         var current = this.root;
+        console.log("current==>", current)
+        
         while (true) {
             if (value === current.value) return undefined;
+
             if (value < current.value) {
+                console.log("value==>", value)
+                console.log("current.value==>", current.value)
                 if (current.left === null) {
                     current.left = newNode;
                     return this;
@@ -62,12 +67,12 @@ tree.insert(10);
 tree.insert(5);
 tree.insert(13);
 tree.insert(11);
-tree.insert(2);
-tree.insert(16);
-tree.insert(7);
-tree.insert(3);
-tree.insert(18);
-tree.insert(4);
+// tree.insert(2);
+// tree.insert(16);
+// tree.insert(7);
+// tree.insert(3);
+// tree.insert(18);
+// tree.insert(4);
 
 // Use the printTree method to print the tree in a tree-like format
 tree.printTree();
