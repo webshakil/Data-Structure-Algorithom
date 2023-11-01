@@ -100,6 +100,25 @@ function collectOddValues(arr){
 }
 
 console.log(collectOddValues([1,2,3,4,5,6,7]))
+
+
+
+function collectOddValues(arr){
+    let newArr = [];
+    
+    if(arr.length === 0) {
+        return newArr;
+    }
+        
+    if(arr){
+        newArr.push(arr[0]);
+    }
+        
+    newArr = newArr.concat(collectOddValues(arr.slice(1)));
+    return newArr;
+}
+
+console.log(collectOddValues([1,2,3,4,5,6,7]))
                                         
                                                                 
                                                                              
